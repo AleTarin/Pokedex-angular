@@ -5,21 +5,6 @@
   </h1>
   <img width="300" alt="Angular Logo" src="https://pro-rankedboost.netdna-ssl.com/wp-content/uploads/2016/07/Pokemon-Go-Pok%C3%A9dex-300x229.png">
 </div>
-<h2>20 first Pokemon</h2>
-<div>
-  <ul>
-    <li></li>
-  </ul>
-</div>
-<h2>Search a Pokemon</h2>
-<div>
-  <input type="text" style="width:170px" placeholder="Enter number of pokemon" [(ngModel)]='pokemonId'>
-  <button type="submit" value="search" (click)="getPokemonInfo()">search</button>
-</div>
-<hr>
-<div *ngIf="pokemon.nombre" class="container">
-  <p>
-    Name: {{pokemon.nombre}}
-  </p>
-  <img src="{{pokemon.imagen}}" alt="{{pokemon.nombre}}">
-</div>
+<button [routerLink]="['/search']">Search Pokemon</button> 
+<button [routerLink]="['/list']">First 20 pokemon</button>
+<router-outlet></router-outlet>

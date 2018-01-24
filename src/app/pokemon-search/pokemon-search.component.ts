@@ -1,21 +1,15 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/forkJoin';
-import { PokemonService } from './pokemon.service';
-import { Pokemon } from './pokemon';
+import { Component, OnInit } from '@angular/core';
+import { PokemonService } from '../pokemon.service';
+import { Pokemon } from '../pokemon';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ],
-  providers: [PokemonService]
+  selector: 'app-pokemon-search',
+  templateUrl: './pokemon-search.component.html',
+  styleUrls: ['./pokemon-search.component.css']
 })
-export class AppComponent implements OnInit  {
-  pageTitle = 'Pokedex';
+export class PokemonSearchComponent {
+  specificPokemon: Pokemon[];
   pokemonId: number;
-  pokeArray: Pokemon[];
-  specificPokemon: Pokemon;
-
 
   constructor(private pokemonService: PokemonService) {
     this.pokemonId = 1;
@@ -43,4 +37,5 @@ export class AppComponent implements OnInit  {
       //   })
       //   .catch(this.handleError);
   }
+
 }

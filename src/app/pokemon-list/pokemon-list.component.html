@@ -1,0 +1,6 @@
+<h2>20 first Pokemon</h2>
+<div *ngIf='pokeArray'>
+  <ul *ngFor='let pokemon of pokeArray'>
+    <li>{{pokemon.name}}</li>
+  </ul>
+</div>

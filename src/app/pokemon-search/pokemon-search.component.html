@@ -1,0 +1,12 @@
+<h2>Search a Pokemon</h2>
+<div>
+  <input type="text" required style="width:170px" placeholder="Enter number of pokemon" [(ngModel)]='pokemonId'>
+  <button type="submit" value="search" (click)="getPokemonInfo()">search</button>
+</div>
+<div *ngIf="specificPokemon" class="container">
+  <p>
+    Name: {{specificPokemon.name}}
+  </p>
+  <!-- <img [src]="pokeArray.sprites.front" alt=""> -->
+  <img src="{{specificPokemon.image}}" alt="{{specificPokemon.name}}">
+</div>
