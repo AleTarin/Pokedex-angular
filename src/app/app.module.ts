@@ -7,10 +7,11 @@ import { AppComponent } from './app.component';
 import { PokemonSearchComponent } from './pokemon-search/pokemon-search.component';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { Routes, RouterModule } from '@angular/router';
-import { appRoutes } from './routes';
 import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
 import { Error404Component } from './errors/error404/error404.component';
 import { HomeComponent } from './home/home.component';
+import { RoutingModule } from './routing.module';
+import { PokemonService } from './pokemon.service';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot( appRoutes )
+    RoutingModule
    ],
   declarations: [
     AppComponent,
@@ -27,6 +28,7 @@ import { HomeComponent } from './home/home.component';
     PokemonDetailComponent,
     Error404Component,
     HomeComponent ],
+  providers: [PokemonService],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
