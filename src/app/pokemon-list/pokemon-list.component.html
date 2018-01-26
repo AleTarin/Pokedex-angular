@@ -1,6 +1,10 @@
+<base href="/">
 <h2>20 first Pokemon</h2>
 <div *ngIf='pokeArray'>
-  <ul *ngFor='let pokemon of pokeArray'>
-    <li>{{pokemon.name}}</li>
+  <ul class="pokemons">
+    <li *ngFor='let pokemon of pokeArray; let i = index'
+        routerLink="/pokemons">
+      <span class="badge">{{i + 1}}</span> {{pokemon.name}}
+    </li>
   </ul>
 </div>

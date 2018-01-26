@@ -1,0 +1,14 @@
+nav{
+    background-color: rgb(196, 19, 42);
+    color: white;
+}
+
+nav h2 {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 2em;
+}

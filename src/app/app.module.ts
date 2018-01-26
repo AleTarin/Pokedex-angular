@@ -7,6 +7,10 @@ import { AppComponent } from './app.component';
 import { PokemonSearchComponent } from './pokemon-search/pokemon-search.component';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { Routes, RouterModule } from '@angular/router';
+import { appRoutes } from './routes';
+import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
+import { Error404Component } from './errors/error404/error404.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -14,14 +18,15 @@ import { Routes, RouterModule } from '@angular/router';
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot([
-      {path: 'search', component: PokemonListComponent},
-      {path: 'list', component: PokemonSearchComponent},
-      {path: ' ', redirectTo: 'search', pathMatch: 'full'},
-      {path: '**', redirectTo: 'search', pathMatch: 'full'}
-    ])
+    RouterModule.forRoot( appRoutes )
    ],
-  declarations: [ AppComponent, PokemonSearchComponent, PokemonListComponent ],
+  declarations: [
+    AppComponent,
+    PokemonSearchComponent,
+    PokemonListComponent,
+    PokemonDetailComponent,
+    Error404Component,
+    HomeComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
