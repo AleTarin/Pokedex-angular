@@ -26,7 +26,7 @@ export class PokemonService {
     .catch(this.handleError);
   }
 
-  getPokemon(pokemonId?: number)/*: Observable<Pokemon[]>*/ {
+  getPokemon(pokemonId: number)/*: Observable<Pokemon[]>*/ {
     // return this.http
     //   .get(this.all_pkm + pokemonId)
     //   .map((response: Response) => {
@@ -38,12 +38,10 @@ export class PokemonService {
 
       return this.http.get(this.url_pkm + 'pokemon/' + pokemonId + '/')
       .map(res => {
-          const pokemon: Pokemon = {name: res.json().name, image: res.json().sprites.front_default};
+          const pokemon: Pokemon = {id: pokemonId, name: res.json().name, image: res.json().sprites.front_default};
           return pokemon;
-      })
-      .catch(this.handleError);
+      }).catch(this.handleError);
   }
-
   // getPokemonForm(pokemonId) {
   //   return this.http.get(this.url_pkm + 'pokemon-form/' + pokemonId)
   //     .map(res => res.json());

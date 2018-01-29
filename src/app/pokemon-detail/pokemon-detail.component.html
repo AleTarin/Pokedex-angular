@@ -1,3 +1,12 @@
-<p>
-  pokemon-detail works!
-</p>
+<div *ngIf="pokemon" >
+  <p>
+    {{pokemon.name}}
+  </p>
+  <img src="{{pokemon.image}}" alt="{{pokemon.name}}">
+</div>
+<div *ngIf="!pokemon" >
+    <p>
+      Loading...
+    </p>
+</div>
+  

@@ -3,7 +3,7 @@
 <div *ngIf='pokeArray'>
   <ul class="pokemons">
     <li *ngFor='let pokemon of pokeArray; let i = index'
-        routerLink="/pokemons">
+        routerLink="/stats/{{i+1}}">
       <span class="badge">{{i + 1}}</span> {{pokemon.name}}
     </li>
   </ul>

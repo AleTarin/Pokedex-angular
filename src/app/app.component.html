@@ -1,7 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <nav>
+<<<<<<< HEAD
   <img style="heigth:100%; "src="https://vignette.wikia.nocookie.net/es.pokemon/images/6/61/Logo_de_Pok%C3%A9mon_%28EN%29.png/revision/latest?cb=20160319183155" alt="Pokimon">
+=======
+  <h2 [routerLink]="['/home']">
+    {{ pageTitle }}!
+  </h2>
+>>>>>>> 593c83bf026700a1cfabb7102ee16df7be21d480
   <a [routerLink]="['/search']">Search Pokemon</a> 
   <a [routerLink]="['/pokemons']">First 20 pokemon</a>
 </nav>
-  <app-home></app-home>
+<router-outlet></router-outlet>
